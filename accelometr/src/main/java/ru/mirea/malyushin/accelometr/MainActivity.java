@@ -47,12 +47,6 @@ public class MainActivity extends AppCompatActivity implements SensorEventListen
     @Override
     public void onSensorChanged(SensorEvent event) {
         if (event.sensor.getType() == Sensor.TYPE_ACCELEROMETER) {
-//            float valueAzimuth = event.values[0];
-//            float valuePitch = event.values[1];
-//            float valueRoll = event.values[2];
-//            azimuthTextView.setText("Azimuth: " + valueAzimuth);
-//            pitchTextView.setText("Pitch: " + valuePitch);
-//            rollTextView.setText("Roll: " + valueRoll);
             binding.textViewAzimuth.setText("Azimuth: " + event.values[0]);
             binding.textViewPitch.setText("Pitch: " + event.values[1]);
             binding.textViewRoll.setText("Roll: " + event.values[2]);
